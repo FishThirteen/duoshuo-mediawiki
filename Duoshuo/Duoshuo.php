@@ -82,7 +82,7 @@ class Duoshuo{
 			|| !$wgTitle->canTalk()
 			|| $wgTitle->isTalkPage()
 			|| method_exists($wgTitle, 'isMainPage') && $wgTitle->isMainPage()
-			|| in_array($wgTitle->getNamespace(), array(NS_MEDIAWIKI, NS_TEMPLATE, NS_CATEGORY))
+			|| in_array($wgTitle->getNamespace(), array(NS_MEDIAWIKI, NS_TEMPLATE, NS_CATEGORY, NS_FILE))
 			|| $wgOut->isPrintable()
 			|| $wgRequest->getVal('action', 'view') != "view")
 			return true;
